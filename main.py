@@ -84,7 +84,7 @@ def draw_bboxes(image, bboxes ):
 
 
 
-st.title('Plant(Apple,tomato,corn,..) disease detector')
+st.title('Plant(Apple,tomato,corn,..) disease detector using yolov8 ')
 image  = st.file_uploader("**put your image for examintion  :** ")
 
 
@@ -103,13 +103,7 @@ if image is not None :
 
         draw_bboxes(image, xyxy)
         image.save("output.png")
-        st.download_button(
-                label="Download image",
-                data=BytesIO(image.tobytes()),
-                file_name="result_image.jpg",
-                key="download_button",
-                help="Click to download t image.",
-            )
+        
 
 
 
@@ -122,6 +116,13 @@ if image is not None :
         # Display image in the first column
         
         st.image("output.png", caption='Annotated Image', use_column_width=True)
+        st.download_button(
+                label="Download image",
+                data=BytesIO(image.tobytes()),
+                file_name="result_image.jpg",
+                key="download_button",
+                help="Click to download t image.",
+            )
 
         # Display frequencies in the second column
 
