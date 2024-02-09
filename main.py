@@ -84,7 +84,7 @@ def draw_bboxes(image, bboxes ):
 
 
 
-st.title('Plant(Apple,tomato,corn,..) disease detector using yolov8 ')
+st.title('Plants (Apple,tomato,corn,..) disease detector using yolov8 ')
 image  = st.file_uploader("**put your image for examintion  :** ")
 
 
